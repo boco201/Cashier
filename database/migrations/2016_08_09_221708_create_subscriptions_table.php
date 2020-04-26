@@ -19,8 +19,8 @@ class CreateSubscriptionsTable extends Migration
             $table->string('stripe_id');
             $table->string('stripe_plan');
             $table->integer('quantity');
-            $table->timestamp('trial_ends_at')->true();
-            $table->timestamp('ends_at')->true();
+            $table->timestamp('trial_ends_at')->nullable();
+            $table->timestamp('ends_at')->nullable();
             $table->timestamps();
         });
     }
